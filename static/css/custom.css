@@ -9,3 +9,24 @@ img {
 .bilberry-hugo-theme .container {max-width: 100%; width: 1200px;}
 .bilberry-hugo-theme article {max-width: 100%; width: 100%;}
 code {white-space: pre-wrap}
+::selection {
+    background: #333;
+    color: white;
+    padding: 5px;
+  }
+
+body {
+    font-family: 'Roboto Mono', monospace !important;
+}
+
+.hugo-theme h1,h2,h3,h4,h5 {
+    font-family: 'Roboto Mono', monospace !important;
+}
+
+code {
+    font-family: 'Roboto Mono', monospace !important;
+}
+
+.bilberry-hugo-theme {
+    font-size: 14px;
+}
