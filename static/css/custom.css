@@ -1,3 +1,11 @@
 img {
     max-width: 100%;
 }
+
+.bilberry-hugo-theme header .container:after {display: none;}
+.bilberry-hugo-theme .main:before {display: none;}
+.bilberry-hugo-theme .main .article-wrapper .bubble {display: none;}
+.bilberry-hugo-theme .main .article-wrapper {justify-content: center;}
+.bilberry-hugo-theme .container {max-width: 100%; width: 1200px;}
+.bilberry-hugo-theme article {max-width: 100%; width: 100%;}
+code {white-space: pre-wrap}
