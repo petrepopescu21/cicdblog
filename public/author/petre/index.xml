@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Petre on Fun with Ops</title>
+    <link>https://tbd.com/author/petre/</link>
+    <description>Recent content in Petre on Fun with Ops</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 01 Nov 2017 13:18:45 +0100</lastBuildDate>
+    
+	<atom:link href="https://tbd.com/author/petre/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About Us</title>
+      <link>https://tbd.com/page/about-bilberry/</link>
+      <pubDate>Wed, 01 Nov 2017 13:18:45 +0100</pubDate>
+      
+      <guid>https://tbd.com/page/about-bilberry/</guid>
+      <description>An about page will sit here.</description>
+    </item>
+    
+  </channel>
+</rss>
