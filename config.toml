@@ -1,5 +1,5 @@
 title = "Fun with Ops"
-baseURL = "https://http://azurecicdblog.azurewebsites.net"
+baseURL = "https://azurecicdblog.azurewebsites.net"
 theme = "bilberry-hugo-theme"
 
 enableRobotsTXT = true
