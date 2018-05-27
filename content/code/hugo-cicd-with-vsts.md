@@ -106,4 +106,4 @@ Simply hit `Save & Queue` and watch the magic happen.
 
 To automatically trigger a Build and Deploy process when changes are pushed, open Triggers under the Build definition and check `Enable continuous integration`
 
-![CI](../../static/images/2018-05-27-19-54-46.png)
+![CI](/images/2018-05-27-19-54-46.png)
