@@ -1,7 +1,7 @@
 img {
     max-width: 100%;
 }
-
+.bilberry-hugo-theme .main:after {display: none;}
 .bilberry-hugo-theme header .container:after {display: none;}
 .bilberry-hugo-theme .main:before {display: none;}
 .bilberry-hugo-theme .main .article-wrapper .bubble {display: none;}

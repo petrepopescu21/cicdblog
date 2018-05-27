@@ -11,14 +11,10 @@ For ease of writing, I have setup an automated build process using VSTS which in
 
 <!--more-->
 
-## Prerequisites
+### Prerequisites
 
 For the purpose of this guide, I'll assume you have Hugo installed locally and already created a site.
 If you need a guide on how to start using Hugo, please follow to Getting Started guide here: https://gohugo.io/getting-started/
-
-Select the `Linux agent` queue
-
-![Build Agent Setup](/images/2018-05-27-17-33-25.png)
 
 __Create a new project in your VSTS team__
 
@@ -26,7 +22,7 @@ https://yourvststeam.visualstudio.com/_projects?_a=new
 
 For this guide, we'll use Github as the code repository and solely use VSTS for building and deploying the code.
 
-## Setting up the build definition
+### Setting up the build definition
 
 __Selecting the source__
 
@@ -56,7 +52,11 @@ To enable VSTS to resolve the submodule as well:
 
 __Setting up the build agent__
 
-For the build agent, we need to install hugo. According to the [Official documentation](https://gohugo.io/getting-started/installing/), you have a choice of either using Snap or apt-get. Snap will not work in our scenario and apt-get will probably resolve and older version. Instead, we will use the [Release](https://github.com/gohugoio/hugo/releases) page of the official repository and use the latest debian package to install.
+We are using a Linux agent for this guide, so go ahead and select the Process step on the left and select the `Linux agent` queue in the `Agent Queue` dropdown list.
+
+![Build Agent Setup](/images/2018-05-27-17-33-25.png)
+
+For the build agent, we need to install Hugo. According to the [Official documentation](https://gohugo.io/getting-started/installing/), you have a choice of either using Snap or apt-get. Snap will not work in our scenario and apt-get will probably resolve to and older version. Instead, we will use the [Release](https://github.com/gohugoio/hugo/releases) page of the official repository and use the latest debian package to install Hugo.
 
 Head over to https://github.com/gohugoio/hugo/releases and copy the link of the latest x64 Linux deb package. When this article was written, the latest version was 0.41 so we'll use:
 `https://github.com/gohugoio/hugo/releases/download/v0.41/hugo_0.41_Linux-64bit.deb`
@@ -79,7 +79,7 @@ This last command will build our Hugo blog and output the static files to `dist/
 
 ![hugo](/images/2018-05-27-19-38-53.png)
 
-## Set up the deployment
+### Set up the deployment
 
 For the current project there is no need for separate build and release steps, so the deployment step will be added to the same build definition.
 For this example, we will be using an App Service on Windows as a destination.
@@ -98,7 +98,7 @@ __Run your deployment__
 
 Simply hit `Save & Queue` and watch the magic happen.
 
-## Set up Continuous Integration
+### Set up Continuous Integration
 
 To automatically trigger a Build and Deploy process when changes are pushed, open Triggers under the Build definition and check `Enable continuous integration`
 
