@@ -29,7 +29,9 @@ __Selecting the source__
 Navigate to Build and Release > Builds and select `New Definition`
 Select `Github` as a source and then `Authorize VSTS`
 Select your repository and branch:
+
 ![Repo and branch](/images/2018-05-27-17-17-13.png)
+
 Hit `Continue` and select `Empty process` on the next screen as we won't be using a template
 
 __Managing themes__
@@ -37,6 +39,7 @@ __Managing themes__
 If you are following any Hugo theme installing guide online, one of the required step is to `git clone` the theme into the `/themes/` subfolder. When pushing your project to a Git repository, such as Github, that cloned theme will be considered a submodule.
 
 To enable VSTS to resolve the submodule as well:
+
 - Add a `.gitmodules` file to your project containing:
 
 ```git
@@ -87,6 +90,7 @@ For this example, we will be using an App Service on Windows as a destination.
 __Add the deployment step__
 
 Add an Azure App Service Deploy task and follow these steps:
+
 - Select your Azure Subscription
 - Authorize VSTS to access the subscription (this will create a Service Principal with deployment access)
 - Select the App Service name you wish to deploy to and a slot if required
