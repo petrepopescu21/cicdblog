@@ -46,7 +46,7 @@ googleAnalytics = ""
     subtitle = "Dev, ops and common mistakes."
 
     # if you want to use gravatar for the header image
-    gravatarEMail = ""
+    gravatarEMail = "petrepopescu21@gmail.com"
 
     # set an path to the image file you want to use | overwrites gravatar
     customImage = ""
