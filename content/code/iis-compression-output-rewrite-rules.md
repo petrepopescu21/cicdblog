@@ -10,7 +10,7 @@ author: "Petre"
 In an App Service Plan, there is one IIS server running per instance and each Web App will run in its own App Domain. Although compression is enabled on the entire server, the web.config file applies to the app itself. If you enable compression here, it will run in the same pipeline as the Rewrite Module so it will clash with your Outbound rules.
 There is a way to work around the issue, by removing the Accept-Encoding header, performing the outbound rewrite actions and then adding the header back before passing the request through the Compression module.
 
-### 1. Add `HTTP_ACCEPT_ENCODING` and `HTTP_X_ORIGINAL_ACCEPT_ENCODING` as allowed server variables
+##### 1. Add `HTTP_ACCEPT_ENCODING` and `HTTP_X_ORIGINAL_ACCEPT_ENCODING` as allowed server variables
 
 Create an applicationHost.xdt file in `D:\home\site` and paste the following content
 
@@ -31,7 +31,7 @@ Create an applicationHost.xdt file in `D:\home\site` and paste the following con
 This will allow us to modify the two headers in various steps within the pipeline. We'll use the `HTTP_X_ORIGINAL_ACCEPT_ENCODING` as a backup for `HTTP_ACCEPT_ENCODING`
 When adding multiple values to the `allowedServerVariables` definition, make sure that you add the Locator property.
 
-### 2. Create a catch all inbound rewrite rule in your web.config to remove the accept-encoding header
+##### 2. Create a catch all inbound rewrite rule in your web.config to remove the accept-encoding header
 
 ```xml
 <rule name="Catch all" patternSyntax="Wildcard">
@@ -48,7 +48,7 @@ When adding multiple values to the `allowedServerVariables` definition, make sur
 </rule>
 ```
 
-### 3. Create a new outbound rule/precondition pair which will add the header back – make sure that this is the last rule in the outboundRules definition
+##### 3. Create a new outbound rule/precondition pair which will add the header back – make sure that this is the last rule in the outboundRules definition
 
 ```xml
 <rule name="Restore Headers" preCondition="NeedsRestoringAcceptEncoding">
@@ -63,10 +63,10 @@ When adding multiple values to the `allowedServerVariables` definition, make sur
 </preCondition>
 ```
 
-### 4. Add your compression definition __after__ the rewrite module definition
+##### 4. Add your compression definition __after__ the rewrite module definition
 
 ```xml
 <urlCompression doStaticCompression="true" doDynamicCompression="true" dynamicCompressionBeforeCache="false" />
 ```
 
-### 5. Restart the site (step required for the first step to take effect)
+##### 5. Restart the site (step required for the first step to take effect)
