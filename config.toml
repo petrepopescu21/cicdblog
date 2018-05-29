@@ -26,7 +26,7 @@ googleAnalytics = ""
 
   # Description and meta data for the search engines
   author = "Petre Popescu"
-  description = "Building and deploying to Azure App Services."
+  description = "Yet another tech blog."
   keywords = "blog,azure,ops,devops,vsts,build,deploy"
 
   # How many articles should be displayed at once?
@@ -37,8 +37,8 @@ googleAnalytics = ""
 
   # Enable / Disable algolia search
   algolia_search    = true
-  algolia_appId     = "Y2C4RWMPXW"
-  algolia_apiKey    = "50ea7f8c41c0ad233926e0be2b769ed1"
+  algolia_appId     = "GJ9MEWBFTX"
+  algolia_apiKey    = "b2197d7719ba33da14dd727dc0daef9f"
   algolia_indexName = "default-content"
 
   # Header configuration
@@ -59,7 +59,7 @@ googleAnalytics = ""
   twitter    = ""
   googleplus = ""
   pinterest  = ""
-  instagram  = ""
+  instagram  = "https://instagram.com/_.petre"
   tumblr     = ""
   youtube    = ""
   vimeo      = ""
