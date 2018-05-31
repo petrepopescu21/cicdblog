@@ -52,7 +52,7 @@ googleAnalytics = ""
     customImage = ""
 
     # always display the top navigation (with pages and search) on non-mobile screens
-    permanentTopNav = false
+    permanentTopNav = true
 
   # social media profile urls for the footer links
   facebook   = ""
