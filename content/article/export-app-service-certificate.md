@@ -6,7 +6,10 @@ tags: ['App Service Certificate', 'Azure', 'Powershell', 'pfx']
 author: "Petre"
 ---
 
-There are a couple of guides out there regarding these steps. This is a simplified version which only requires three variables:
+There are a couple of guides out there regarding these steps. This is a simplified version.
+<!--more-->
+
+You only requires three variables:
 
 -   A password used to encrypt the private key (which will be used when importing the pfx)
 -   The name of the KeyVault used to store the App Service Certificate
