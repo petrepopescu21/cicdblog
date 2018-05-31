@@ -1,7 +1,6 @@
 ---
 title: "Exporting an Azure App Service Certificate to a pfx file using Powershell"
-date: 2018-05-27T16:31:27+03:00
-
+date: 2018-05-31T09:50:27+03:00
 categories: ['Article', 'Tutorials']
 tags: ['App Service Certificate', 'Azure', 'Powershell', 'pfx']
 author: "Petre"
